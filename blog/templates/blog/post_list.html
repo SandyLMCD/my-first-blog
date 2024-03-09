@@ -12,12 +12,18 @@
             </h1>
         </header>
 
-        <!-- First article -->
+        {% for post in posts %}
+
         <article>
-            <time>Published: MM.DD.YYYY, 00:00</time>
+            <time>Published: {{ post.published_date }}</time>
+            <h2><a href=""> {{ post.title }} </a></h2>
+            <p> {{ post.text|linebreaksbr }} </p>
+            <!-- <time>Published: MM.DD.YYYY, 00:00</time>
             <h2><a href="">First post</a></h2>
-            <p>Lorem ipsum dolor eme.</p>
+            <p>Lorem ipsum dolor eme.</p> -->
         </article>
+
+        {% endfor %}
 
         <!-- Second article -->
         <article>
