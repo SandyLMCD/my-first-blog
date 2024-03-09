@@ -17,20 +17,10 @@
         <article>
             <time>Published: {{ post.published_date }}</time>
             <h2><a href=""> {{ post.title }} </a></h2>
-            <p> {{ post.text|linebreaksbr }} </p>
-            <!-- <time>Published: MM.DD.YYYY, 00:00</time>
-            <h2><a href="">First post</a></h2>
-            <p>Lorem ipsum dolor eme.</p> -->
+            <p> {{ post.text|linebreaksbr }} </p> 
         </article>
 
         {% endfor %}
-
-        <!-- Second article -->
-        <!-- <article>
-            <time>Published: MM.DD.YYYY, 00:00</time>
-            <h2><a href="">Second post</a></h2>
-            <p>Lorem ipsum dolor ers.</p>
-        </article> -->
 
     </body>
 </html>
