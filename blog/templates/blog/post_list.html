@@ -9,6 +9,7 @@
             body {
             font-family: 'Times New Roman', Times, serif;
             margin: 0;
+            padding: 30px;
         }
         .header {
             color: #9f0000;
@@ -30,25 +31,52 @@
             background-color: #ffbb00;
             font-weight: normal;
         }
+        .page-header {
+        background-color: #ffbb00;
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding: 20px 20px 20px 40px;
+        }
+        .post {
+    margin-bottom: 70px;
+}
+
+.post h2 a,
+.post h2 a:visited {
+    color: #000000;
+}
+
+.post > .date,
+.post > .actions {
+    float: right;
+}
         </style>
     </head>
     <body>
 
-        <header>
+        <header class = "page-header">
+            <div class="container">
             <h1>
-                <a href="/">SNDY Django Blog</a>
+                <a href="/">Django Girls</a>
             </h1>
+        </div>
         </header>
 
+        <main class ="container">
+            <div class="row">
+                <div class="col">
         {% for post in posts %}
 
-        <article>
+        <article class ="post">
             <time>Published: {{ post.published_date }}</time>
             <h2><a href=""> {{ post.title }} </a></h2>
             <p> {{ post.text|linebreaksbr }} </p> 
         </article>
 
         {% endfor %}
+    </div>
+    </div>
+    </main>
 
     </body>
 </html>
